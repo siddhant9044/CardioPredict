@@ -1,0 +1,366 @@
+.assessment-shell {
+  width: min(1460px, calc(100% - 48px));
+  min-height: 820px;
+  margin: 40px auto;
+  padding: 34px;
+  display: grid;
+  grid-template-columns: 0.94fr 1.12fr;
+  gap: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  background: linear-gradient(135deg, #f8fbff, #f0f5fb);
+  box-shadow: 0 22px 65px rgba(39, 60, 90, 0.09);
+}
+
+.assessment-intro {
+  min-width: 0;
+  padding: 20px 8px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  color: #65748b;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.assessment-intro h1 {
+  margin: 22px 0 16px;
+  color: #111b32;
+  font-size: clamp(34px, 3.1vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -1.8px;
+}
+
+.intro-description {
+  max-width: 510px;
+  margin: 0;
+  color: #6d7b91;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* Keep the medical background image.
+   Remove only the extra heart outline and orbit graphics. */
+.heart-symbol,
+.heart-orbit {
+  display: none !important;
+}
+
+.heart-visual {
+  position: relative;
+  min-height: 360px;
+  flex: 1;
+  display: block;
+  overflow: hidden;
+}
+
+.floating-metric {
+  position: absolute;
+  z-index: 2;
+  width: 190px;
+}
+
+.metric-blood {
+  top: 30%;
+  left: 0;
+}
+
+.metric-heart {
+  right: 0;
+  bottom: 13%;
+}
+
+.metric-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #e9eef6;
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.93);
+  box-shadow: 0 10px 30px rgba(38, 60, 90, 0.07);
+}
+
+.metric-icon {
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #edf5ff;
+  color: #4389f5;
+}
+
+.metric-red .metric-icon {
+  background: #fff0f1;
+  color: #e84e5b;
+}
+
+.metric-content {
+  min-width: 0;
+}
+
+.metric-title {
+  display: block;
+  margin-bottom: 4px;
+  color: #728096;
+  font-size: 12px;
+}
+
+.metric-value-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.metric-value-row strong {
+  color: #111b32;
+  font-size: 21px;
+}
+
+.metric-unit {
+  color: #728096;
+  font-size: 11px;
+}
+
+.intro-caption {
+  margin: 8px 0 4px;
+  color: #738198;
+  font-size: 14px;
+  text-align: center;
+}
+
+.assessment-form-panel {
+  min-width: 0;
+  align-self: stretch;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 30px rgba(41, 62, 91, 0.035);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.form-heading h2 {
+  margin: 0;
+  color: #111b32;
+  font-size: 32px;
+  letter-spacing: -0.8px;
+}
+
+.form-heading p {
+  margin: 12px 0 42px;
+  color: #68768b;
+  font-size: 14px;
+}
+
+.required,
+.form-field b {
+  color: #d74353;
+}
+
+.assessment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 24px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  color: #172238;
+  font-size: 14px;
+}
+
+.form-field > span {
+  line-height: 1.5;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  height: 59px;
+  padding: 0 16px;
+  border: 1px solid #d5dbe4;
+  border-radius: 9px;
+  outline: none;
+  background-color: #fff;
+  color: #25334a;
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-field input::placeholder {
+  color: #9aa4b1;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: #4388f5;
+  box-shadow: 0 0 0 3px rgba(67, 136, 245, 0.12);
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.form-footer {
+  margin-top: 55px;
+}
+
+.progress-section {
+  margin-bottom: 26px;
+}
+
+.progress-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #69778c;
+  font-size: 13px;
+}
+
+.progress-dot {
+  color: #9aa7b9;
+}
+
+.progress-track {
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e8edf4;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #4388f5;
+  transition: width 0.3s ease;
+}
+
+.primary-button {
+  width: 100%;
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 11px;
+  background: linear-gradient(100deg, #448af7, #347af0);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(52, 122, 240, 0.23);
+}
+
+.form-error {
+  margin: 20px 0 0;
+  color: #c93242;
+  font-size: 14px;
+}
+
+@media (max-width: 1050px) {
+  .assessment-shell {
+    grid-template-columns: 1fr;
+    width: min(760px, calc(100% - 32px));
+    padding: 24px;
+  }
+
+  .assessment-intro {
+    padding: 12px;
+  }
+
+  .heart-visual {
+    min-height: 300px;
+  }
+
+  .intro-caption {
+    margin-bottom: 20px;
+  }
+
+  .assessment-form-panel {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .assessment-shell {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 15px;
+    gap: 20px;
+    border-radius: 20px;
+  }
+
+  .assessment-intro h1 {
+    font-size: 35px;
+  }
+
+  .intro-description {
+    font-size: 15px;
+  }
+
+  .heart-visual {
+    min-height: 220px;
+  }
+
+  .floating-metric {
+    width: 155px;
+  }
+
+  .metric-card {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .metric-icon {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+
+  .metric-value-row strong {
+    font-size: 17px;
+  }
+
+  .assessment-form-panel {
+    padding: 21px 16px;
+  }
+
+  .form-heading h2 {
+    font-size: 26px;
+  }
+
+  .form-heading p {
+    margin-bottom: 28px;
+  }
+
+  .assessment-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .field-full {
+    grid-column: auto;
+  }
+
+  .form-footer {
+    margin-top: 32px;
+  }
+}
